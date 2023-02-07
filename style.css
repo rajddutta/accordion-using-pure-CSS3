@@ -1,0 +1,68 @@
+h4 {
+  font-size: 2em;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+.accordion {
+  position: relative;
+  display: block;
+  background-color: rgb(220, 235, 243);
+  border: solid 1px #e0e0e0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.accordion__item {
+  display: block;
+}
+
+.accordion .accordion__content {
+  display: block;
+  padding: 0;
+  height: 0;
+  transition: height 0.5s ease, padding 0.3s linear;
+  overflow: hidden;
+}
+
+.accordion .accordion__content p {
+  padding: 20px;
+  margin: 0;
+  font-size: 1.2em;
+}
+.accordion .accordion__content:target {
+  height: 150px;
+}
+
+.accordion .accordion__trigger {
+  text-decoration: none;
+}
+
+.accordion .accordion__title {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.5em;
+  background: #4a5293;
+  color: white;
+  border: solid 1px #379aa4;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset, 0 -1px 0 rgba(255,255,255,0.1) inset, 0 4px 0 #062058, 0 4px 2px rgba(0,0,0,0.5);
+}
+
+.accordion .accordion__title:hover {
+  background-color: #423299;
+}
+
+.accordion .accordion__title::after {
+  position: absolute;
+  content: "";
+  top: calc(50% - 5px);
+  right: 20px;
+  width: 7px;
+  height: 7px;
+  border-left: solid 2px white;
+  border-bottom: solid 2px white;
+  transform: rotate(-45deg);
+}
